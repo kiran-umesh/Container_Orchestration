@@ -1,0 +1,18 @@
+frontend:
+  replicas: 2
+  image: your-dockerhub-username/frontend-image:latest
+  service:
+    port: 80
+    nodePort: 30001
+
+backend:
+  replicas: 2
+  image: your-dockerhub-username/backend-image:latest
+  service:
+    port: 3000
+
+mongo:
+  replicas: 1
+  image: mongo:latest
+  service:
+    port: 27017
